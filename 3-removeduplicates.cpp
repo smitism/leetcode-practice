@@ -6,16 +6,14 @@ using namespace std;
 
 class Solution {
 public:
-    int removeElement(vector<int>& nums, int val) {
-        
+    int removeDuplicates(vector<int>& nums) {
         int j = 0;
-        int temp;
-        for (int i=0;i<nums.size();i++){
-            if(nums[i]!=val){
-                nums[j] = nums[i];
+        for(int i = 0;i < nums.size()-1;i++){
+            if (nums[i]!=nums[i+1]){
                 j++;
+                nums[j]=nums[i+1]; 
             }
         }
-        return j;
+        return j+1;
     }
 };
