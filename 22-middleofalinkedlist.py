@@ -13,4 +13,4 @@ class Solution:
             j=j.next
             i=i.next.next
         return j
-        
+            
